@@ -1,0 +1,105 @@
+{
+  "appareils": [
+    {
+      "id": 1,
+      "name": "Machine à laver",
+      "description": [
+        "Volume: 6 litres",
+        "Temps de lavage: 2 heures",
+        "Consommation: 173 kWh/an"
+      ],
+      "isOn": true,
+      "startTime": "",
+      "endTime": ""
+    },
+    {
+      "id": 2,
+      "name": "Télévision",
+      "description": [
+        "Dimensions: 40 pouces",
+        "Consommation: 22 kWh/an"
+      ],
+      "isOn": true,
+      "startTime": "2021-05-12T23:36:49.614+01:00",
+      "endTime": ""
+    },
+    {
+      "id": 3,
+      "name": "Ordinateur",
+      "description": [
+        "Marque: fait maison",
+        "Consommation: 500 kWh/an"
+      ],
+      "isOn": false,
+      "startTime": "",
+      "endTime": ""
+    },
+    {
+      "name": "zzzzzzz",
+      "description": [
+        "aaaaaaaaaaaaaaaa",
+        "ttttttttttttttt",
+        "ttttttttttttt"
+      ],
+      "isOn": false,
+      "startTime": "",
+      "endTime": "",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "name": "ttttttttttt",
+      "description": [
+        "ttyyyyyyyyyyy"
+      ],
+      "isOn": false,
+      "startTime": "",
+      "endTime": ""
+    },
+    {
+      "name": "eeeeee",
+      "description": [
+        "rrrrrrrrr"
+      ],
+      "isOn": false,
+      "startTime": "",
+      "endTime": "",
+      "id": 6
+    },
+    {
+      "name": "eee",
+      "description": [
+        "rrrrrrr",
+        "dddddddddddddd"
+      ],
+      "id": 7
+    },
+    {
+      "name": "aaaaa",
+      "description": [
+        "qqqqqqqqq",
+        "eeeeeeeeeee",
+        "ddddddddddddddddd"
+      ],
+      "id": 8
+    },
+    {
+      "name": "pppp",
+      "description": [
+        "mmmmmmm",
+        "oooooooooooo",
+        "lllllllll"
+      ],
+      "id": 9
+    },
+    {
+      "id": 10,
+      "name": "ggggggg",
+      "description": [
+        "rrrrrrrrr"
+      ],
+      "startTime": "2021-05-15T22:57:43.134+01:00",
+      "endTime": "2021-05-15T22:57:43.134+01:00"
+    }
+  ]
+}

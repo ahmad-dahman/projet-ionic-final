@@ -1,3 +1,45 @@
 <ion-app>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
   <ion-router-outlet></ion-router-outlet>
+  <ion-menu side="start" content-id="main-content">
+    <ion-header>
+      <ion-toolbar translucent>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content id="main-content">
+      <ion-list>
+        <ion-item  *ngIf="isAuth">
+        <ion-button icon-start (click)="onNavigate('appareils')" >
+          <ion-icon name="power"></ion-icon>
+          Appareils
+        </ion-button>
+      </ion-item>
+      <ion-item  *ngIf="isAuth">
+        <ion-button icon-start (click)="onNavigate('options')">
+          <ion-icon name="options"></ion-icon>
+          Options
+        </ion-button>
+      </ion-item>
+    <ion-item *ngIf="!isAuth">
+      <ion-button ion-item icon-start (click)="onAuth('auth', 'new')">
+        <ion-icon name="person-add"></ion-icon>
+        Nouvel utilisateur
+      </ion-button>
+    </ion-item>
+  <ion-item *ngIf="!isAuth">
+      <ion-button icon-start (click)="onAuth('auth', 'connect')" >
+        <ion-icon name="person"></ion-icon>
+        Connexion
+      </ion-button>
+    </ion-item>
+    <ion-item  *ngIf="isAuth">
+      <ion-button icon-start (click)="onDisconnect()" >
+        <ion-icon name="exit"></ion-icon>
+        Déconnexion
+      </ion-button>
+    </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
 </ion-app>

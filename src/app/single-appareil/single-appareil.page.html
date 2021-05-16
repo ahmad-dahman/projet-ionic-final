@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons >
+      <ion-buttons start>
+        <ion-button icon-only (click)="openMenu()">
+          <ion-icon name="menu"></ion-icon>
+        </ion-button>
+  </ion-buttons>
+      <ion-title>{{ name }}<ion-button clear href="/appareils">Fermer</ion-button></ion-title>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card [ngClass]="{'is-on': isOn, 'is-off': !isOn}">
+    <ion-card-header>{{ name }}</ion-card-header>
+    <ion-card-content>
+      <p *ngFor="let line of description">{{ line }}</p>
+      <ion-button  full
+          (click)="onUpdateAppareil(id)">update</ion-button>
+    </ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button  full
+          color="danger"
+          [disabled]="!isOn"
+          (click)="onToggleAppareil()">Eteindre</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button  full
+          color="secondary"
+          [disabled]="isOn"
+          (click)="onToggleAppareil()">Allumer</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+  <form #f="ngForm" (ngSubmit)="onSubmitForm(f)">
+    <ion-list>
+      <ion-item>
+        <ion-label>Heure d'allumage : </ion-label>
+        <ion-datetime displayFormat="HH:mm" name="startTime" [(ngModel)]="startTime"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>Heure d'extinction : </ion-label>
+        <ion-datetime displayFormat="HH:mm" name="endTime" [(ngModel)]="endTime"></ion-datetime>
+      </ion-item>
+    </ion-list>
+    <ion-button type="button"
+            ion-button
+            full
+            color="danger"
+            (click)="onDeleteHours()">
+      Supprimer horaires
+    </ion-button>
+    <ion-button type="submit"
+            ion-button
+            full
+            color="secondary">
+      Enregistrer horaires
+    </ion-button>
+</form>
+<ion-button type="button"
+            ion-button
+            full
+            color="danger"
+            (click)="onDeleteAppareil(id)">
+      Supprimer Appareil
+    </ion-button>
+</ion-content>
+<ion-footer>
+  <app-footer ></app-footer>
+  <app-tabs></app-tabs>
+</ion-footer>

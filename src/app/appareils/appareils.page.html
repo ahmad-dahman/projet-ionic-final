@@ -1,0 +1,35 @@
+  <ion-header>
+    <ion-toolbar>
+    <ion-buttons>
+      <ion-buttons start>
+        <ion-button icon-only (click)="openMenu()">
+          <ion-icon name="menu"></ion-icon>
+        </ion-button>
+  </ion-buttons>
+      <ion-title>Appareils</ion-title>
+    </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <ion-list>
+      
+      <ion-item *ngFor="let appareil of listevide">
+        <ion-button (click)="onLoadAppareil(appareil.id)">
+          <ion-icon name="power" [color]="appareil.isOn ? 'secondary' : 'danger'"></ion-icon>
+          {{ appareil.name }}
+      </ion-button>
+      <ion-button ion-button (click)="onLoadAppareil(appareil.id)">
+        <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-button>
+    </ion-item>
+    </ion-list>
+    <ion-button full (click)="onNewAppareil()">Nouvel appareil</ion-button>
+  </ion-content>
+  <ion-footer>
+    <app-footer ></app-footer>
+    <app-tabs></app-tabs>
+  </ion-footer>
+
+
+
